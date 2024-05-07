@@ -22,13 +22,11 @@ jobs:
         run: flutter build web --release
 
       - name: Deploy
-        run: |
-          cd build/web
-          git init
-          git config user.name "bdlukaa"
-          git config user.email "brunodlukaa@github.com"
-          git remote add secure-origin https://bdlukaa:${GITHUB_TOKEN}@github.com/bdlukaa/de.gustar.git
-          git checkout -b gh-pages 
-          git add .
-          git commit -m "Deployed Github Pages"
-          git push --force secure-origin gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          force_orphan: true
+          user_name: 'github-ci[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Publish to gh-pages'
