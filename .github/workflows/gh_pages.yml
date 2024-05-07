@@ -27,8 +27,8 @@ jobs:
           git init
           git config user.name "bdlukaa"
           git config user.email "brunodlukaa@github.com"
-          git remote add secure-origin https://username:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git checkout -b gh-pages
+          git remote add secure-origin https://username:${GITHUB_TOKEN}@github.com/de.gustar.git
+          git checkout -b gh-pages 
           git add .
           git commit -m "Deployed Github Pages"
           git push --force secure-origin gh-pages
