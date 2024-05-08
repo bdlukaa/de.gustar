@@ -1,3 +1,7 @@
+// Copyright 2019 the Dart project authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license
+// that can be found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 enum Cousines {
@@ -167,6 +171,17 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFF5722),
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+        ),
+      ),
+      themeMode: ThemeMode.dark,
       home: const Root(),
     );
   }
@@ -417,7 +432,7 @@ class RestaurantInfo extends StatelessWidget {
                   SnackBar(
                     width: 200,
                     behavior: SnackBarBehavior.floating,
-                    content: Text('Mesa reservada.'),
+                    content: Text('Mesa reservada.', textAlign: TextAlign.center),
                   ),
                 );
               },
