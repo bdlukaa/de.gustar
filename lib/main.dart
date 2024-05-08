@@ -181,7 +181,7 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       home: const Root(),
     );
   }
@@ -403,10 +403,18 @@ class RestaurantInfo extends StatelessWidget {
             ),
           ),
           const Divider(),
-          Text(
-            'Cardápio',
-            style: theme.textTheme.titleLarge,
-          ),
+          Row(children: [
+            Expanded(
+              child: Text(
+                'Cardápio',
+                style: theme.textTheme.titleLarge,
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Ver mais'),
+            ),
+          ]),
           SizedBox(
             height: 160,
             child: ListView.separated(
@@ -432,7 +440,8 @@ class RestaurantInfo extends StatelessWidget {
                   SnackBar(
                     width: 200,
                     behavior: SnackBarBehavior.floating,
-                    content: Text('Mesa reservada.', textAlign: TextAlign.center),
+                    content:
+                        Text('Mesa reservada.', textAlign: TextAlign.center),
                   ),
                 );
               },
@@ -440,10 +449,18 @@ class RestaurantInfo extends StatelessWidget {
             ),
           ),
           const Divider(),
-          Text(
-            'Fotos',
-            style: theme.textTheme.titleLarge,
-          ),
+          Row(children: [
+            Expanded(
+              child: Text(
+                'Fotos',
+                style: theme.textTheme.titleLarge,
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Ver mais'),
+            ),
+          ]),
           SizedBox(
             height: 160,
             child: ListView.separated(
