@@ -1,7 +1,3 @@
-// Copyright 2019 the Dart project authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license
-// that can be found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 
 enum Cousines {
@@ -195,7 +191,7 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  Cousines? selectedCousine = null;
+  Cousines? selectedCousine;
 
   @override
   Widget build(BuildContext context) {
@@ -203,23 +199,23 @@ class _RootState extends State<Root> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.restaurant),
+        leading: const Icon(Icons.restaurant),
         title: const Text('de.gustar'),
       ),
       body: ListView(
         padding: const EdgeInsetsDirectional.symmetric(vertical: 20.0),
         children: [
           Row(children: [
-            SizedBox(width: 16.0),
+            const SizedBox(width: 16.0),
             Icon(Icons.place, color: theme.colorScheme.primary),
-            SizedBox(width: 8.0),
+            const SizedBox(width: 8.0),
             Text('Localização atual: ', style: theme.textTheme.labelSmall),
             Text('Brasília', style: theme.textTheme.labelLarge),
           ]),
           SizedBox(
             height: 40.0,
             child: ListView.separated(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
               scrollDirection: Axis.horizontal,
               itemCount: Cousines.values.length,
               itemBuilder: (context, index) {
@@ -245,7 +241,7 @@ class _RootState extends State<Root> {
           ),
           const Divider(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'Perto de Você',
               style: theme.textTheme.titleLarge,
@@ -254,7 +250,7 @@ class _RootState extends State<Root> {
           SizedBox(
             height: 120,
             child: ListView.separated(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
               scrollDirection: Axis.horizontal,
               itemCount: resturants.length,
               itemBuilder: (context, index) {
@@ -262,18 +258,18 @@ class _RootState extends State<Root> {
                 return Container(
                   height: 120,
                   width: 120.0,
-                  padding: EdgeInsets.all(6.0),
+                  padding: const EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),
                     image: DecorationImage(
                       image: NetworkImage(restaurant.restaurantImage),
                       colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.6), BlendMode.dstATop),
+                          Colors.black.withOpacity(0.6), BlendMode.darken),
                     ),
                   ),
                   child: Text(
                     restaurant.restaurantName,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -286,7 +282,7 @@ class _RootState extends State<Root> {
           ),
           const Divider(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'Restaurantes',
               style: theme.textTheme.titleLarge,
@@ -310,7 +306,8 @@ class RestaurantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsetsDirectional.symmetric(horizontal: 16, vertical: 8.0),
+      margin:
+          const EdgeInsetsDirectional.symmetric(horizontal: 16, vertical: 8.0),
       child: Row(children: [
         Expanded(
           child: Column(
@@ -343,7 +340,7 @@ class RestaurantCard extends StatelessWidget {
                         ),
                       );
                     },
-                    icon: Icon(Icons.navigate_next),
+                    icon: const Icon(Icons.navigate_next),
                     label: const Text('Ver'),
                   ),
                 ],
@@ -370,12 +367,12 @@ class RestaurantInfo extends StatelessWidget {
         title: Text(restaurant.restaurantName),
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: [
           Card(
             margin: EdgeInsets.zero,
             child: Padding(
-              padding: EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(12.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -412,7 +409,7 @@ class RestaurantInfo extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: Text('Ver mais'),
+              child: const Text('Ver mais'),
             ),
           ]),
           SizedBox(
@@ -431,13 +428,13 @@ class RestaurantInfo extends StatelessWidget {
             'Reservas',
             style: theme.textTheme.titleLarge,
           ),
-          Center(child: Text('Nenhuma mesa reservada para você ainda!')),
-          SizedBox(height: 6.0),
+          const Center(child: Text('Nenhuma mesa reservada para você ainda!')),
+          const SizedBox(height: 6.0),
           Center(
             child: ElevatedButton(
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
+                  const SnackBar(
                     width: 200,
                     behavior: SnackBarBehavior.floating,
                     content:
@@ -445,7 +442,7 @@ class RestaurantInfo extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Reservar mesa'),
+              child: const Text('Reservar mesa'),
             ),
           ),
           const Divider(),
@@ -458,7 +455,7 @@ class RestaurantInfo extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: Text('Ver mais'),
+              child: const Text('Ver mais'),
             ),
           ]),
           SizedBox(
@@ -484,13 +481,13 @@ class RestaurantInfo extends StatelessWidget {
           ...List.generate(6, (index) {
             return Card(
               child: Padding(
-                padding: EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(children: [
-                      CircleAvatar(child: Icon(Icons.person)),
-                      SizedBox(width: 8.0),
+                      const CircleAvatar(child: Icon(Icons.person)),
+                      const SizedBox(width: 8.0),
                       Expanded(
                         child: Text(
                           'Dona Maria',
@@ -499,8 +496,8 @@ class RestaurantInfo extends StatelessWidget {
                       ),
                       Text('5 estrelas', style: theme.textTheme.labelSmall),
                     ]),
-                    SizedBox(height: 6.0),
-                    Text(
+                    const SizedBox(height: 6.0),
+                    const Text(
                       'Comida tradicional de qualidade com um preço justo. '
                       'O atendimento pode melhorar no sentido de maior rapidez no rodízio. '
                       'Garçom super simpático!',
@@ -538,16 +535,16 @@ class RestaurantInfo extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.0),
         image: DecorationImage(
           image: NetworkImage(restaurant.restaurantImage),
-          colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.6), BlendMode.dstATop),
+          colorFilter:
+              ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.darken),
         ),
       ),
       alignment: Alignment.center,
       child: Padding(
-        padding: EdgeInsets.all(6.0),
+        padding: const EdgeInsets.all(6.0),
         child: Text(
           name,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18.0,
             color: Colors.white,
             fontWeight: FontWeight.bold,

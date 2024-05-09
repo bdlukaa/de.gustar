@@ -1,6 +1,5 @@
 import 'package:degustar/models/restaurant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
