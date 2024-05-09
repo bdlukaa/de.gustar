@@ -63,8 +63,7 @@ const resturants = {
     restaurantAddress: 'SCLS 207, Bloco C Loja 17, SHCS',
     restaurantPriceRange: 3,
     restaurantRating: 4.5,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$1',
   ),
   Restaurant(
     cuisine: Cousines.chinese,
@@ -72,8 +71,7 @@ const resturants = {
     restaurantAddress: 'SCLN 405, Loja 15, SHCN',
     restaurantPriceRange: 3,
     restaurantRating: 4.3,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$2',
   ),
   Restaurant(
     cuisine: Cousines.french,
@@ -81,8 +79,7 @@ const resturants = {
     restaurantAddress: 'Asa Norte Comércio Local Norte 103 Bloco B Loja 2',
     restaurantPriceRange: 2,
     restaurantRating: 4.5,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$3',
   ),
   Restaurant(
     cuisine: Cousines.brazilian,
@@ -90,8 +87,7 @@ const resturants = {
     restaurantAddress: 'Asa Norte Comércio Local Norte 103 Bloco B Loja 2',
     restaurantPriceRange: 2,
     restaurantRating: 4.5,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$4',
   ),
   Restaurant(
     cuisine: Cousines.indian,
@@ -99,8 +95,7 @@ const resturants = {
     restaurantAddress: 'Asa Norte CLN 402 BLOCO B LOJA 47',
     restaurantPriceRange: 3,
     restaurantRating: 4.7,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$5',
   ),
   Restaurant(
     cuisine: Cousines.italian,
@@ -108,8 +103,7 @@ const resturants = {
     restaurantAddress: '201 Sul, Bloco C, Loja 11',
     restaurantPriceRange: 4,
     restaurantRating: 4.8,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$6',
   ),
   Restaurant(
     cuisine: Cousines.mexican,
@@ -117,33 +111,32 @@ const resturants = {
     restaurantAddress: '404 Sul, Bloco C, Loja 19',
     restaurantPriceRange: 3,
     restaurantRating: 4.6,
-    restaurantImage:
-        'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no',
+    restaurantImage: r'https://picsum.photos/160?random=$7',
   ),
   Restaurant(
-      cuisine: Cousines.spanish,
-      restaurantName: 'La Rubia Café',
-      restaurantAddress: 'SCLS 404 Bloco C Loja 44',
-      restaurantPriceRange: 2,
-      restaurantRating: 4.4,
-      restaurantImage:
-          'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no'),
+    cuisine: Cousines.spanish,
+    restaurantName: 'La Rubia Café',
+    restaurantAddress: 'SCLS 404 Bloco C Loja 44',
+    restaurantPriceRange: 2,
+    restaurantRating: 4.4,
+    restaurantImage: r'https://picsum.photos/160?random=$8',
+  ),
   Restaurant(
-      cuisine: Cousines.thai,
-      restaurantName: 'Thai Gardens',
-      restaurantAddress: 'SCLS 104 Bloco D Loja 16',
-      restaurantPriceRange: 3,
-      restaurantRating: 4.5,
-      restaurantImage:
-          'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no'),
+    cuisine: Cousines.thai,
+    restaurantName: 'Thai Gardens',
+    restaurantAddress: 'SCLS 104 Bloco D Loja 16',
+    restaurantPriceRange: 3,
+    restaurantRating: 4.5,
+    restaurantImage: r'https://picsum.photos/160?random=$9',
+  ),
   Restaurant(
-      cuisine: Cousines.vietnamese,
-      restaurantName: 'Pho Pho',
-      restaurantAddress: 'SCLS 109 Bloco A Loja 2',
-      restaurantPriceRange: 2,
-      restaurantRating: 4.3,
-      restaurantImage:
-          'https://lh5.googleusercontent.com/p/AF1QipM9o8YfVc78A2r3PenqoO1EZiEN2kjz2h3JQIZH=w114-h114-n-k-no'),
+    cuisine: Cousines.vietnamese,
+    restaurantName: 'Pho Pho',
+    restaurantAddress: 'SCLS 109 Bloco A Loja 2',
+    restaurantPriceRange: 2,
+    restaurantRating: 4.3,
+    restaurantImage: r'https://picsum.photos/160?random=$10',
+  ),
 };
 
 void main() {
